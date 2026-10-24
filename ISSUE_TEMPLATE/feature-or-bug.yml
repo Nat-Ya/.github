@@ -1,0 +1,27 @@
+name: Feature or bug (to refine)
+description: Raw request. The Lead (or the PO/AS) refines it into micro-tasks.
+title: ""
+labels: ["status:backlog"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options: [bug, feature, chore]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What and why
+      description: Observed vs expected for a bug; user outcome for a feature.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce / context
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and non-goals

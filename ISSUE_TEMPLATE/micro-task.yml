@@ -1,0 +1,55 @@
+name: Micro-task
+description: One PR, one behavior, written by the Lead for a fast developer.
+title: "[micro] "
+labels: ["status:ready", "size:s"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal (one sentence) and why
+    validations:
+      required: true
+  - type: textarea
+    id: ac
+    attributes:
+      label: Acceptance criteria (Given / When / Then)
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Files / functions to touch
+      description: Exact paths. Anything else is out of scope.
+    validations:
+      required: true
+  - type: textarea
+    id: forbidden
+    attributes:
+      label: Forbidden zones
+      placeholder: CI, dependencies, lockfiles, secrets, infra, public API...
+  - type: textarea
+    id: first-test
+    attributes:
+      label: First failing test to write
+      description: Test name and what it asserts.
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands to run (verified in repo config)
+  - type: input
+    id: deps
+    attributes:
+      label: Blocked by
+      placeholder: "#12 (leave empty if independent)"
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Definition of Done
+      description: See DEFINITION-OF-DONE.md in the org .github repository.
+      options:
+        - label: Size guard respected (≤ ~150 lines, ≤ ~5 files)
+        - label: Tests written first, all green locally
+        - label: Conventional Commits, one PR, `Closes #n`
+        - label: No secrets, no CI/deps/infra change
