@@ -1,6 +1,6 @@
 name: Feature or bug (to refine)
 description: Raw request. The Lead (or the PO/AS) refines it into micro-tasks.
-title: ""
+title: "[request] "
 labels: ["status:backlog"]
 body:
   - type: dropdown

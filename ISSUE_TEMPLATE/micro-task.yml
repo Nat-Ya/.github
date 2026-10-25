@@ -51,5 +51,5 @@ body:
       options:
         - label: Size guard respected (≤ ~150 lines, ≤ ~5 files)
         - label: Tests written first, all green locally
-        - label: Conventional Commits, one PR, `Closes #n`
+        - label: "Conventional Commits, one PR, `Closes #n`"
         - label: No secrets, no CI/deps/infra change
